@@ -1,4 +1,5 @@
 import {
+  NavLink,
   Links,
   LiveReload,
   Meta,
@@ -7,10 +8,15 @@ import {
   ScrollRestoration,
 } from "remix";
 import type { MetaFunction } from "remix";
+import styles from "./styles/app.css";
 
 export const meta: MetaFunction = () => {
   return { title: "Lily Eisner" };
 };
+
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
 
 export default function App() {
   return (
@@ -23,6 +29,13 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <div>
+          <nav>
+            <NavLink to="home">Home</NavLink>
+            <NavLink to="blog">Blog</NavLink>
+            <NavLink to="contact">Contact Me</NavLink>
+          </nav>
+        </div>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
