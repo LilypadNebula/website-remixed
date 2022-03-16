@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: Maler;
+  src: url("/Maler.ttf");
+}
+
+@font-face {
+  font-family: Asap;
+  src: url("/Asap-VariableFont_wght.ttf");
+}

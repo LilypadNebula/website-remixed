@@ -28,14 +28,17 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
-        <div>
-          <nav>
-            <NavLink to="home">Home</NavLink>
-            <NavLink to="blog">Blog</NavLink>
-            <NavLink to="contact">Contact Me</NavLink>
-          </nav>
-        </div>
+      <body className="flex h-screen">
+        <nav className="flex flex-col p-8 justify-between items-center h-full text-2xl font-heading shadow-lg">
+          <NavLink to="home">Home</NavLink>
+          <NavLink to="blog">Blog</NavLink>
+          <NavLink to="contact">Contact Me</NavLink>
+          <img
+            src="/big_logo.png"
+            alt="Pink circle logo with Lily Eisner in dark text"
+            className="h-48 w-48"
+          />
+        </nav>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
