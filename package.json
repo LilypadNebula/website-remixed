@@ -14,11 +14,11 @@
   "dependencies": {
     "@netlify/functions": "^1.0.0",
     "@remix-run/netlify": "^1.4.1",
+    "@remix-run/node": "^1.4.1",
     "@remix-run/react": "^1.4.1",
     "global": "^4.4.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "remix": "^1.4.1"
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.4.1",
