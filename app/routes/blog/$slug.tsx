@@ -3,6 +3,7 @@ import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { GraphQLClient } from "graphql-request";
 import { marked } from "marked";
+import type { MetaFunction } from "@remix-run/node";
 
 const graphcms = new GraphQLClient(
   "https://api-us-east-1.graphcms.com/v2/cl2fdhzyj15jf01z66i2qd3oo/master"
@@ -27,6 +28,10 @@ export const loader: LoaderFunction = async ({ params }) => {
   const html = marked(content);
 
   return json({ title, html });
+};
+
+export const meta: MetaFunction = ({ data }) => {
+  return { title: `${data.title} - Lily Eisner` };
 };
 
 export default function PostSlug() {
