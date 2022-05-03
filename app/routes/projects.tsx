@@ -39,12 +39,12 @@ export default function Projects() {
       {projects.map((project) => (
         <div
           key={project.title}
-          className="rounded-md border w-1/4 text-center"
+          className="rounded-md border w-1/4 pb-6 text-center"
         >
           <p className="font-heading text-3xl border-b border-magenta">
             {project.title}
           </p>
-          <p className="mb-4">{project.description}</p>
+          <p className="mb-4 p-4">{project.description}</p>
           <a
             href={project.mainUrl}
             className="bg-magenta rounded p-2 text-zinc-700 font-medium"

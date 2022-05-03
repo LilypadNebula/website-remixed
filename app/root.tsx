@@ -12,6 +12,7 @@ import styles from "./styles/app.css";
 
 export const meta: MetaFunction = () => {
   return {
+    title: "Lily Eisner",
     charSet: "utf-8",
     viewport: "width=device-width,initial-scale=1",
   };
@@ -26,7 +27,7 @@ export function links() {
 
 function Wrapper({
   children,
-  title = "Lily Eisner",
+  title,
 }: {
   children: React.ReactNode;
   title?: string;
@@ -34,7 +35,7 @@ function Wrapper({
   return (
     <html lang="en">
       <head>
-        <title>{title}</title>
+        {title && <title>{title}</title>}
         <Meta />
         <Links />
       </head>
@@ -59,6 +60,7 @@ function Wrapper({
             className={({ isActive }) =>
               isActive ? "text-magenta" : undefined
             }
+            prefetch="intent"
           >
             Blog
           </NavLink>
@@ -67,6 +69,7 @@ function Wrapper({
             className={({ isActive }) =>
               isActive ? "text-magenta" : undefined
             }
+            prefetch="intent"
           >
             Projects
           </NavLink>
@@ -75,6 +78,7 @@ function Wrapper({
             className={({ isActive }) =>
               isActive ? "text-magenta" : undefined
             }
+            prefetch="intent"
           >
             Contact Me
           </NavLink>
