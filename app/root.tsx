@@ -80,10 +80,12 @@ function Wrapper({
             }
             prefetch="intent"
           >
-            Contact Me
+            Contact
           </NavLink>
         </nav>
-        <div className="flex justify-center">{children}</div>
+        <div className="flex justify-center font-main text-zinc-100">
+          {children}
+        </div>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

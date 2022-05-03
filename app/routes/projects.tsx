@@ -35,7 +35,7 @@ export const meta: MetaFunction = () => {
 export default function Projects() {
   const projects = useLoaderData<Project[]>();
   return (
-    <div className="font-main text-zinc-100 w-full flex justify-around">
+    <div className="w-full flex justify-around">
       {projects.map((project) => (
         <div
           key={project.title}

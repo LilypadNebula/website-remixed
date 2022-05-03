@@ -10,6 +10,9 @@ module.exports = {
         magenta: "#cb6ce6",
         myGray: "#363633",
       },
+      spacing: {
+        128: "32rem",
+      },
     },
   },
   plugins: [],
