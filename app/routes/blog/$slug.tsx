@@ -1,4 +1,4 @@
-import { useLoaderData } from "@remix-run/react";
+import { useLoaderData, useCatch, Link } from "@remix-run/react";
 import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { GraphQLClient } from "graphql-request";
@@ -10,9 +10,7 @@ const graphcms = new GraphQLClient(
 );
 
 export const loader: LoaderFunction = async ({ params }) => {
-  const {
-    post: { title, content },
-  } = await graphcms.request(
+  const result = await graphcms.request(
     `
     query PostBySlug($slug: String!){
       post(where: {slug: $slug}) {
@@ -24,13 +22,17 @@ export const loader: LoaderFunction = async ({ params }) => {
     `,
     { slug: params.slug }
   );
-
+  if (result.post == null) {
+    throw new Response("Post not found", { status: 404 });
+  }
+  const { content, title } = result.post;
   const html = marked(content);
 
   return json({ title, html });
 };
 
 export const meta: MetaFunction = ({ data }) => {
+  if (data == undefined) return { title: "Error" };
   return { title: `${data.title} - Lily Eisner` };
 };
 
@@ -45,4 +47,18 @@ export default function PostSlug() {
       <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </div>
   );
+}
+
+export function CatchBoundary() {
+  const caught = useCatch();
+  if (caught.status === 404) {
+    return (
+      <div className="text-zinc-100">
+        <p className="text-4xl mb-6">Post Not Found</p>
+        <Link to="/blog">
+          There doesn't appear to be a post here, click here to see all posts
+        </Link>
+      </div>
+    );
+  } else throw new Error(`Error occured: ${caught.status}`);
 }
