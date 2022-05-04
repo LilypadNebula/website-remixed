@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <div className="text-center w-full">
       <p className="text-4xl mb-6">Contact</p>
-      <div className="flex space-x-6 justify-center text-2xl">
+      <div className="flex flex-col items-center space-y-4 justify-center text-2xl">
         <a
           href="http://twitter.com/lilypadnebula"
           className="text-magenta underline"

@@ -1,6 +1,6 @@
 export default function Index() {
   return (
-    <div className="flex justify-center font-main text-zinc-100 text-xl">
+    <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-center font-main text-zinc-100 text-xl">
       <img
         src="/chibi_no_bg.png"
         alt="Chibi drawing of Lily, very cute"
