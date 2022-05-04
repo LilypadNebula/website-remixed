@@ -42,9 +42,12 @@ export default function PostSlug() {
     html: string;
   }>();
   return (
-    <div className="font-main text-zinc-100">
-      <p className="text-4xl">{title}</p>
-      <div dangerouslySetInnerHTML={{ __html: html }}></div>
+    <div className="font-main text-zinc-100 w-full flex flex-col items-center">
+      <p className="text-4xl border-b border-white mb-8">{title}</p>
+      <div
+        dangerouslySetInnerHTML={{ __html: html }}
+        className="w-1/2 flex flex-col items-center blog-container"
+      ></div>
     </div>
   );
 }

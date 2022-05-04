@@ -11,11 +11,11 @@ export const meta: MetaFunction = () => {
 export const loader: LoaderFunction = async ({ params }) => {
   const results = await graphcms.request(`
     {
-      posts {
+      posts(orderBy: publishedAt_DESC) {
+        publishedAt
         id
         slug
         title
-        createdAt
       }
     }
     `);
@@ -26,13 +26,13 @@ export const loader: LoaderFunction = async ({ params }) => {
 export default function Blog() {
   const results =
     useLoaderData<
-      { id: string; slug: string; title: string; createdAt: string }[]
+      { id: string; slug: string; title: string; publishedAt: string }[]
     >();
   return (
     <div className="font-main text-zinc-100 w-full flex flex-col items-center">
       <p className="text-4xl mb-6">Blog</p>
       {results.map((post) => {
-        const created = new Date(post.createdAt).toLocaleDateString("en-US", {
+        const created = new Date(post.publishedAt).toLocaleDateString("en-US", {
           month: "short",
           day: "numeric",
           year: "numeric",

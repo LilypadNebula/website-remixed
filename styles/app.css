@@ -11,3 +11,15 @@
   font-family: Asap;
   src: url("/Asap-VariableFont_wght.ttf");
 }
+
+.blog-container h1 {
+  @apply text-xl;
+}
+
+.blog-container a {
+  @apply text-magenta underline;
+}
+
+.blog-container p {
+  @apply mb-4 text-lg;
+}
