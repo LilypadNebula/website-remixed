@@ -8,18 +8,11 @@ export default function Index() {
       />
       <div className="w-1/2 space-y-4">
         <p>
-          Hello! My name is Lily Eisner. I'm a developer that focuses on front
-          end experiences. I'm also a writer and like to make games!
+          Hello! My name is Lily Eisner. I'm a trans woman and a lesbian, and mainly I'm a developer that focuses on front
+          end experiences. 
         </p>
         <p>
-          I'm a trans woman and a lesbian. If either of those things offends
-          you, I have an alternate website for you{" "}
-          <a
-            href="https://gprivate.com/5yd24"
-            className="text-magenta underline"
-          >
-            here!
-          </a>
+          I'm also a writer and like to make games! Here you can find some of that writing, some projects I've done, and keep up with more as they come.
         </p>
       </div>
     </div>

@@ -13,7 +13,7 @@ interface Project {
   secondaryUrlDisplayText: string;
 }
 
-export const loader: LoaderFunction = async ({ params }) => {
+export const loader: LoaderFunction = async () => {
   const results = await graphcms.request(`
   { projects {
     title
