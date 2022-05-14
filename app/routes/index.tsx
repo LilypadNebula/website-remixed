@@ -7,10 +7,10 @@ export default function Index() {
         className="max-h-128"
       />
       <div className="w-1/2 space-y-4">
-        <p>
+        <h1>
           Hello! My name is Lily Eisner. I'm a trans woman and a lesbian, and mainly I'm a developer that focuses on front
           end experiences. 
-        </p>
+        </h1>
         <p>
           I'm also a writer and like to make games! Here you can find some of that writing, some projects I've done, and keep up with more as they come.
         </p>

@@ -17,7 +17,7 @@
 }
 
 .blog-container a {
-  @apply text-magenta underline;
+  @apply text-fuchsia-300 underline;
 }
 
 .blog-container p {

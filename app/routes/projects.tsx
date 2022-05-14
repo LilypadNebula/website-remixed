@@ -35,24 +35,28 @@ export const meta: MetaFunction = () => {
 export default function Projects() {
   const projects = useLoaderData<Project[]>();
   return (
-    <div className="w-full flex justify-around">
-      {projects.map((project) => (
-        <div
-          key={project.title}
-          className="rounded-md border w-1/4 pb-6 text-center"
-        >
-          <p className="font-heading text-3xl border-b border-magenta">
-            {project.title}
-          </p>
-          <p className="mb-4 p-4">{project.description}</p>
-          <a
-            href={project.mainUrl}
-            className="bg-magenta rounded p-2 text-zinc-700 font-medium"
-          >
-            {project.mainUrlDisplayText}
-          </a>
+      
+      <div className="flex flex-col w-full">
+        <h1 className="mx-auto text-4xl mb-6">My Projects</h1>
+        <div className="flex justify-around">
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="rounded-md border w-1/4 pb-6 text-center"
+            >
+              <p className="font-heading text-3xl border-b border-fuchsia-400">
+                {project.title}
+              </p>
+              <p className="mb-4 p-4">{project.description}</p>
+              <a
+                href={project.mainUrl}
+                className="bg-fuchsia-400 rounded p-2 text-zinc-900 font-medium"
+              >
+                {project.mainUrlDisplayText}
+              </a>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
   );
 }

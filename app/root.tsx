@@ -49,7 +49,7 @@ function Wrapper({
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "text-magenta" : undefined
+              isActive ? "text-fuchsia-400" : undefined
             }
             end
           >
@@ -58,7 +58,7 @@ function Wrapper({
           <NavLink
             to="blog"
             className={({ isActive }) =>
-              isActive ? "text-magenta" : undefined
+              isActive ? "text-fuchsia-400" : undefined
             }
             prefetch="intent"
           >
@@ -67,7 +67,7 @@ function Wrapper({
           <NavLink
             to="projects"
             className={({ isActive }) =>
-              isActive ? "text-magenta" : undefined
+              isActive ? "text-fuchsia-400" : undefined
             }
             prefetch="intent"
           >
@@ -76,16 +76,16 @@ function Wrapper({
           <NavLink
             to="contact"
             className={({ isActive }) =>
-              isActive ? "text-magenta" : undefined
+              isActive ? "text-fuchsia-400" : undefined
             }
             prefetch="intent"
           >
             Contact
           </NavLink>
         </nav>
-        <div className="flex justify-center font-main text-zinc-100">
+        <main className="flex justify-center font-main text-zinc-100">
           {children}
-        </div>
+        </main>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

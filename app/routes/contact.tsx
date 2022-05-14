@@ -6,17 +6,17 @@ export const meta: MetaFunction = () => {
 export default function Contact() {
   return (
     <div className="text-center w-full">
-      <p className="text-4xl mb-6">Contact</p>
+      <h1 className="text-4xl mb-6">Contact</h1>
       <div className="flex flex-col items-center space-y-4 justify-center text-2xl">
         <a
           href="http://twitter.com/lilypadnebula"
-          className="text-magenta underline"
+          className="text-fuchsia-400 underline"
         >
           Twitter
         </a>
         <a
           href="http://github.com/lilypadnebula"
-          className="text-magenta underline"
+          className="text-fuchsia-400 underline"
         >
           GitHub
         </a>

@@ -30,7 +30,7 @@ export default function Blog() {
     >();
   return (
     <div className="font-main text-zinc-100 w-full flex flex-col items-center">
-      <p className="text-4xl mb-6">Blog</p>
+      <h1 className="text-4xl mb-6">Blog</h1>
       {results.map((post) => {
         const created = new Date(post.publishedAt).toLocaleDateString("en-US", {
           month: "short",
@@ -41,7 +41,7 @@ export default function Blog() {
           <Link
             key={post.id}
             to={post.slug}
-            className="flex justify-between w-1/2 text-2xl border-b border-white hover:border-magenta p-2"
+            className="flex justify-between w-2/3 md:w-1/2 text-2xl border-b border-white hover:border-fuchsia-400 p-2"
             prefetch="intent"
           >
             <p>{post.title}</p>
