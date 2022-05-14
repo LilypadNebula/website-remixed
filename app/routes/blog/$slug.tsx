@@ -46,7 +46,7 @@ export default function PostSlug() {
       <p className="text-4xl border-b border-white mb-8">{title}</p>
       <div
         dangerouslySetInnerHTML={{ __html: html }}
-        className="w-2/3 md:w-1/2 flex flex-col items-center blog-container"
+        className="w-2/3 flex flex-col blog-container"
       ></div>
     </div>
   );

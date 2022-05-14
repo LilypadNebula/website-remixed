@@ -13,7 +13,7 @@
 }
 
 .blog-container h1 {
-  @apply text-3xl mb-2;
+  @apply text-3xl mb-2 mt-6 border-b-2 border-fuchsia-400;
 }
 
 .blog-container a {
@@ -21,5 +21,13 @@
 }
 
 .blog-container p {
-  @apply mb-4 text-lg;
+  @apply text-left mb-2 text-lg;
+}
+
+.blog-container pre {
+  @apply bg-black;
+}
+
+.blog-container pre code {
+  @apply w-full whitespace-pre-wrap;
 }
